@@ -1,0 +1,16 @@
+
+# If you don't require sudo to run docker, comment this out
+DOCKER_REQUIRE_SUDO=sudo
+
+USER_UID=$(id -u)
+USER_GID=$(id -g)
+
+# Choose what to mount, this assumes you have exaile and this repo checked out
+# side by side
+DOCKER_VOLUME[0]="$(abspath ..)"
+DOCKER_VOLUME[1]="$(abspath ~/.config/exaile)"
+DOCKER_VOLUME[2]="$(abspath ~/.local/share/exaile)"
+DOCKER_VOLUME[2]="$(abspath ~/Music)"
+
+# Change this to the script you want to run
+ENTRYPOINT="$(abspath ../exaile/exaile) --no-dbus"
