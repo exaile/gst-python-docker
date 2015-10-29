@@ -30,7 +30,6 @@ $DOCKER_REQUIRE_SUDO docker run --rm -it --privileged \
   -e USER_UID=$USER_UID \
   -e USER_GID=$USER_GID \
   -w "$(abspath `pwd`)" \
-  --privileged \
   -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
   -v /run/user/$USER_UID/pulse:/run/pulse:ro \
   exaile/gst-python $ENTRYPOINT "$@"
