@@ -2,9 +2,8 @@
 FROM docker.io/ubuntu:15.10
 MAINTAINER Dustin Spicuzza <dustin@virtualroadside.com>
 
-ENV DEBIAN_FRONTEND noninteractive
-
 RUN true \
+  && export DEBIAN_FRONTEND=noninteractive \
   && apt-get update \
   && apt-get install -y --no-install-recommends \
     libpulse0 \
