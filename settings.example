@@ -10,7 +10,8 @@ USER_GID=$(id -g)
 DOCKER_VOLUME[0]="$(abspath ..)"
 DOCKER_VOLUME[1]="$(abspath ~/.config/exaile)"
 DOCKER_VOLUME[2]="$(abspath ~/.local/share/exaile)"
-DOCKER_VOLUME[3]="$(abspath ~/Music)"
+DOCKER_VOLUME[3]="$(abspath ~/.cache/exaile)"
+DOCKER_VOLUME[4]="$(abspath ~/Music)"
 
 # Change this to the script you want to run
 ENTRYPOINT="$(abspath ../exaile/exaile) --no-dbus"
