@@ -1,5 +1,5 @@
 
-FROM docker.io/ubuntu:15.10
+FROM docker.io/ubuntu:16.04
 MAINTAINER Dustin Spicuzza <dustin@virtualroadside.com>
 
 RUN true \
