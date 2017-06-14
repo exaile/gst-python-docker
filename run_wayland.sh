@@ -24,12 +24,13 @@ done
 
 $DOCKER_REQUIRE_SUDO docker run --rm -it --privileged \
   $USER_VOLUME \
-  -e DISPLAY="$DISPLAY" \
+  -e XDG_RUNTIME_DIR=/tmp \
+  -e WAYLAND_DISPLAY=$WAYLAND_DISPLAY \
   -e HOME="$HOME" \
   -e USER_NAME="$USER" \
   -e USER_UID=$USER_UID \
   -e USER_GID=$USER_GID \
   -w "$(abspath `pwd`)" \
-  -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+  -v $XDG_RUNTIME_DIR/$WAYLAND_DISPLAY:/tmp/$WAYLAND_DISPLAY \
   -v /run/user/$USER_UID/pulse:/run/pulse:ro \
   docker.io/exaile/gst-python:$IMAGE_VERSION $ENTRYPOINT "$@"

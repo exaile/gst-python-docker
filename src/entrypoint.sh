@@ -9,9 +9,9 @@ groupadd -f -g ${USER_GID} "${USER_NAME}" > /dev/null
 chown --from root:root ${USER_UID}:${USER_GID} "${HOME}"
 
 # create user with uid and gid matching that of the host user
-adduser --uid ${USER_UID} --gid ${USER_GID} --home "${HOME}" \
-	--disabled-login \
-	--gecos 'Exaile' "${USER_NAME}" > /dev/null
+useradd --uid ${USER_UID} --gid ${USER_GID} --home-dir "${HOME}" \
+	--comment 'Exaile' "${USER_NAME}" > /dev/null
+usermod --lock "${USER_NAME}"
 
 # http://stackoverflow.com/questions/6071681/store-shell-arguments-in-file-while-preserving-quoting
 storeargs() {

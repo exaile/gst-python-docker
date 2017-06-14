@@ -1,4 +1,11 @@
-#!/bin/bash
+#!/bin/bash -e
 
 cd `dirname $0`
-docker build --rm -t exaile/gst-python .
+
+TOBUILD=${1:-debian8 debian9 fedora25 ubuntu16.04 ubuntu17.04}
+BASE=docker.io/exaile/gst-python
+
+for i in ${TOBUILD}; do
+    echo "Building $BASE:$i"
+    docker build --rm -t $BASE:$i -f Dockerfile.$i .
+done

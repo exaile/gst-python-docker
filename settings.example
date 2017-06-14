@@ -15,3 +15,7 @@ DOCKER_VOLUME[4]="$(abspath ~/Music)"
 
 # Change this to the script you want to run
 ENTRYPOINT="$(abspath ../exaile/exaile) --no-dbus"
+
+# Change this to the image you want to run
+# -> options are named after the Dockerfiles in this directory
+IMAGE_VERSION=ubuntu16.04

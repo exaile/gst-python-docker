@@ -19,9 +19,14 @@ Usage
 
 First, copy settings.example to settings, then to run exaile:
 
-  ./run.sh
+    ./run.sh
   
 You can customize the settings file to run other programs too.
+
+Alternatively, if you wish to use a Wayland-based display instead of X11, you
+can do this instead:
+
+    ./run_wayland.sh
 
 Building the image
 ------------------
