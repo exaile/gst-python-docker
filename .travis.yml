@@ -1,0 +1,14 @@
+language: generic
+services:
+  - docker
+
+script:
+- ./build.sh
+
+notifications:
+  irc:
+    channels:
+    - "chat.freenode.net#exaile"
+    use_notice: true
+    skip_join: true
+    on_success: change
