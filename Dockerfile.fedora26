@@ -1,5 +1,5 @@
 
-FROM docker.io/fedora:25
+FROM docker.io/fedora:26
 MAINTAINER Dustin Spicuzza <dustin@virtualroadside.com>
 
 RUN true \
