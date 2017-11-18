@@ -1,5 +1,5 @@
 
-FROM docker.io/ubuntu:zesty
+FROM docker.io/ubuntu:17.10
 MAINTAINER Dustin Spicuzza <dustin@virtualroadside.com>
 
 RUN true \
