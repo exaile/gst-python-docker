@@ -1,5 +1,5 @@
 
-FROM docker.io/fedora:26
+FROM docker.io/fedora:28
 MAINTAINER Dustin Spicuzza <dustin@virtualroadside.com>
 
 RUN true \
@@ -8,7 +8,7 @@ RUN true \
     pulseaudio \
     gtk3 \
     pygobject3 \
-    python-gobject \
+    python2-gobject \
     dbus-python \
     pycairo \
     python2-mutagen \
