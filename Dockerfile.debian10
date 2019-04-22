@@ -1,5 +1,5 @@
 
-FROM docker.io/debian:jessie
+FROM docker.io/debian:buster
 MAINTAINER Dustin Spicuzza <dustin@virtualroadside.com>
 
 RUN true \
