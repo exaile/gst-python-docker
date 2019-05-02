@@ -1,5 +1,5 @@
 
-FROM docker.io/ubuntu:xenial
+FROM docker.io/debian:buster
 MAINTAINER Dustin Spicuzza <dustin@virtualroadside.com>
 
 RUN true \

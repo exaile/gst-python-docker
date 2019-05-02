@@ -2,7 +2,7 @@
 
 cd `dirname $0`
 
-TOBUILD=${1:-debian8 debian9 fedora27 fedora28 ubuntu16.04 ubuntu18.04}
+TOBUILD=${1:-debian9 debian10 fedora28 fedora29 ubuntu18.04 ubuntu19.04}
 BASE=docker.io/exaile/gst-python
 
 for i in ${TOBUILD}; do

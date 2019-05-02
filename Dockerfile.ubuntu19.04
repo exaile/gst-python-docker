@@ -1,5 +1,5 @@
 
-FROM docker.io/debian:jessie
+FROM docker.io/ubuntu:19.04
 MAINTAINER Dustin Spicuzza <dustin@virtualroadside.com>
 
 RUN true \
