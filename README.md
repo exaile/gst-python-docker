@@ -36,6 +36,18 @@ hub, then run `./build.sh` (note: if you do not add your user to the docker
 group, then you will need to run build.sh via sudo). It will take a few
 minutes.
 
+Submitting a new tag
+--------------------
+
+If you have access to the 
+[docker hub](https://cloud.docker.com/u/exaile/repository/docker/exaile/gst-python/general),
+you can push a new tag to docker.
+This step is required before you can use a docker tag, e.g. in
+exaile/exaile-testimg. After running `./build.sh` as described above, you will
+need to `docker push exaile/gst-python`, which will upload the containers
+to docker.com. If you get a `requested access to the resource is denied` error,
+you may need to `docker login` before that.
+
 Contributing
 ------------
 
