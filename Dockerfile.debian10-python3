@@ -1,5 +1,5 @@
 
-FROM docker.io/ubuntu:19.04
+FROM docker.io/debian:buster
 MAINTAINER Dustin Spicuzza <dustin@virtualroadside.com>
 
 RUN true \
@@ -8,10 +8,10 @@ RUN true \
   && apt-get install -y --no-install-recommends \
     libpulse0 \
     pulseaudio \
-    python-mutagen \
-    python-gi \
-    python-gi-cairo \
-    python-dbus \
+    python3-mutagen \
+    python3-gi \
+    python3-gi-cairo \
+    python3-dbus \
     gir1.2-gtk-3.0 \
     gir1.2-gstreamer-1.0 \
     gir1.2-gst-plugins-base-1.0 \
