@@ -1,0 +1,29 @@
+
+FROM docker.io/fedora:31
+MAINTAINER Dustin Spicuzza <dustin@virtualroadside.com>
+
+RUN true \
+  && dnf -y install \
+    pulseaudio-libs \
+    pulseaudio \
+    gtk3 \
+    python3 \
+    python3-cairo \
+    python3-dbus \
+    python3-gobject \
+    python3-gstreamer1 \
+    python3-mutagen \
+    gstreamer1-plugins-base \
+    gstreamer1-plugins-good \
+    gstreamer1-plugins-ugly-free \
+    gstreamer1-plugins-bad-free \
+  && dnf clean all \
+  && echo enable-shm=no >> /etc/pulse/client.conf
+
+# PulseAudio server
+ENV PULSE_SERVER /run/pulse/native
+
+COPY src/entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
+CMD /bin/bash
